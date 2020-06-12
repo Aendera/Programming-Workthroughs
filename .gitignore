@@ -1,3 +1,4 @@
-*
-!*/build/Release/*.exe
-!*/src/*
+C++/*
+!.gitignore
+!C++/*/build/Release/*.exe
+!C++/*/src/*
