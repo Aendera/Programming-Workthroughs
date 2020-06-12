@@ -1,7 +1,5 @@
-C++/*
-!C++/*/build/Release/
-C++/*/build/Release/*
-!C++/*/build/Release/*.exe
+C++/WorkthroughC++ByExample/*
+!C++/WorkthroughC++ByExample/VirtualDie/build/Release/*.exe
 
-!C++/*/src/
+!C++/WorkthroughC++ByExample/VirtuaDie/src/*
 !.gitignore
