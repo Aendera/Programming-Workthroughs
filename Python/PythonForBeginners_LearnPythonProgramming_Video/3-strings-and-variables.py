@@ -2,7 +2,7 @@
 """
 Created on Sat Jun 13 21:25:56 2020
 
-@author: user
+@author: Romain Bettinelli
 """
 
 #Exercise 1
