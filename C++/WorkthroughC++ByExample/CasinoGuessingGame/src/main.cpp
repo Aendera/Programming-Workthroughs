@@ -1,10 +1,16 @@
 #include<iostream>
 #include<random>
 class Money {
+
+private:
+	int money;
 public:
-	void set_money(int start) {
-		this->money = start;
+	Money(int& capital) {
+		this->money = capital;
 	}
+	/*void set_money(int start) {
+		this->money = start;
+	}*/
 	void lose_money(int loss) {
 		this->money -= loss;
 	}
@@ -14,8 +20,6 @@ public:
 	int get_money() {
 		return this->money;
 	}
-private:
-	int money;
 };
 int house_guess() {
 	std::random_device random_device;
@@ -26,13 +30,13 @@ int house_guess() {
 }
 int main(){
 
-	Money PlayerMoney;
 	int bet, guess, startup_capital,house;
 
 	std::cout << "Set your starting chip count"<< std::endl;
 
 	std::cin >> startup_capital;
-	PlayerMoney.set_money(startup_capital);
+
+	Money PlayerMoney(startup_capital);
 	while (PlayerMoney.get_money() > 0){
 	//get random number
 		house = house_guess();
