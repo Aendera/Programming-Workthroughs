@@ -6,6 +6,7 @@ Created on Sun Jun 14 07:28:49 2020
 """
 
 def print_dict(people):
+    """Displays dictionary facts"""
     for person in people:
         print("{}: {}".format(person,people[person]))
 

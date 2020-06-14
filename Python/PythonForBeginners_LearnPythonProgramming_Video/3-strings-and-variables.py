@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Sat Jun 13 21:25:56 2020
-
-@author: Romain Bettinelli
-"""
 
 #Exercise 1
 animal="cat"
@@ -24,9 +19,10 @@ print()
 
 #Exercise_3
 #Keep input of previous exercises
-print("       {}".format("_"*len(user_input)))
+text_length=len(user_input)
+print("       {}".format("_"*text_length))
 print("     < {} >".format(user_input))
-print("       {}".format("-"*len(user_input)))
+print("       {}".format("-"*text_length))
 print("        /")
 print(" /\_/\ /")
 print("( o.o )")
