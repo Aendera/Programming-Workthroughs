@@ -34,3 +34,17 @@ book_library book_library_parser::load_book_library(const std::string& path)
 	}
 	return book_library({});
 }
+
+bool book_library_parser::save_book_library(const book_library& library, const std::string& output_path) {
+	std::ofstream output(output_path);
+	if (output.is_open() && output.good())
+	{
+		const auto books = library.books();
+		for (const auto& book : books) {
+			output << book.title << "," << book.author << "," << book.genre << std::endl;
+		}
+		output.close();
+		return true;
+	}
+	return false;
+}

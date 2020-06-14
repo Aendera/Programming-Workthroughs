@@ -34,6 +34,11 @@ int main() {
 			print_books(sorted_books);
 		}
 		break;
+		case application::app_action::save_library:
+		{
+			parser.save_book_library(library, "books.csv");
+			break;
+		}
 		}
 	} while (app.continue_running());
 	return 0;
