@@ -2,7 +2,6 @@
 #include "application.h"
 #include "book_library_parser.h"
 #include <iterator>
-
 void print_books(const std::vector<book>& books)
 {
 	std::copy(books.begin(), books.end(),
@@ -44,9 +43,14 @@ int main() {
 		{
 			std::cout << "Enter title" << std::endl;
 			std::string title;
-			std::cin >> title;
+			std::cin.ignore();
+			std::getline(std::cin,title);
 			auto found_book = library.find_book_by_title(title);
-			std::cout << found_book << std::endl;
+			if (found_book.title == title){
+			std::cout << found_book << std::endl; }
+			else {
+				std::cout << title<<" not found" << std::endl;
+			}
 			break;
 		}
 
@@ -54,9 +58,15 @@ int main() {
 		{
 			std::cout << "Enter author" << std::endl;
 			std::string author;
-			std::cin >> author;
+			std::cin.ignore();
+			std::getline(std::cin, author); 
 			auto found_books = library.find_books_by_author(author);
-			print_books(found_books);
+			if (!found_books.empty()) {
+				print_books(found_books);
+			}
+			else {
+				std::cout << "No books by "<<author<< " found" << std::endl;
+			}
 			break;
 		}
 		}

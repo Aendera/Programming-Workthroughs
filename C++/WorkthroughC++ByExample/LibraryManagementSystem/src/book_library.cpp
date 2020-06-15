@@ -10,7 +10,6 @@ book_library::book_library(const std::vector<book>& books)
 }
 book book_library::find_book_by_title(const std::string& title)
 {
-	//TODO
 	//Return exact match [1]
 	//iterate and return book for item.title==title
 	for (auto item : books_) {
@@ -18,7 +17,8 @@ book book_library::find_book_by_title(const std::string& title)
 			return item;
 		}
 	}
-		return {};
+		return book{};
+	//suggested solution made use of find_if and lambda.
 	}
 
 std::vector<book> book_library::find_books_by_author(const std::string & author)
