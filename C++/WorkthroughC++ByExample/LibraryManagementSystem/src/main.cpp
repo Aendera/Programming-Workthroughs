@@ -32,11 +32,31 @@ int main() {
 		{
 			auto sorted_books = library.sort_books();
 			print_books(sorted_books);
+
+			break;
 		}
-		break;
 		case application::app_action::save_library:
 		{
 			parser.save_book_library(library, "books.csv");
+			break;
+		}
+		case application::app_action::search_book:
+		{
+			std::cout << "Enter title" << std::endl;
+			std::string title;
+			std::cin >> title;
+			auto found_book = library.find_book_by_title(title);
+			std::cout << found_book << std::endl;
+			break;
+		}
+
+		case application::app_action::search_author:
+		{
+			std::cout << "Enter author" << std::endl;
+			std::string author;
+			std::cin >> author;
+			auto found_books = library.find_books_by_author(author);
+			print_books(found_books);
 			break;
 		}
 		}

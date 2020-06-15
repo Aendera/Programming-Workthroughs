@@ -6,7 +6,8 @@ with open('file.txt') as file:
     count=0
     for line in file:
          count+=1
-         print("{}: ".format(count),line,end="")
+         print("{}: ".format(count),line.rstrip())
+
  #Exercise 2
 with open('animals.txt') as file:
     sorted_animals=sorted(file.readlines())
