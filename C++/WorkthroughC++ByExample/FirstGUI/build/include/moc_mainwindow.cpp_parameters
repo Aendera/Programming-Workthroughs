@@ -1,0 +1,4 @@
+-DWIN32
+-o
+C:/Users/user/Downloads/IT/C++/WorkthroughC++ByExample/FirstGUI/build/include/moc_mainwindow.cpp
+C:/Users/user/Downloads/IT/C++/WorkthroughC++ByExample/FirstGUI/include/mainwindow.h
