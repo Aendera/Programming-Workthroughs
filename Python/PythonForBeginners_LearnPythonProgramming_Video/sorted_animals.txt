@@ -1,7 +1,0 @@
-bear
-cow
-dog
-duck
-horse
-man
-pig

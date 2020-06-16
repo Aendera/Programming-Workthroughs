@@ -1,3 +1,0 @@
-This is line one.
-This is line two.
-Finally, we are on the third and last line of the file.
