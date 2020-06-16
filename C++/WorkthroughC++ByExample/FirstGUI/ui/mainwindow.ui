@@ -18,7 +18,7 @@
     <item>
      <widget class="QLabel" name="label">
       <property name="text">
-       <string/>
+       <string>TextLabel</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -28,7 +28,7 @@
     <item>
      <widget class="QPushButton" name="pushButton">
       <property name="text">
-       <string>Click Me</string>
+       <string>Click me</string>
       </property>
      </widget>
     </item>
@@ -40,7 +40,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>17</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>

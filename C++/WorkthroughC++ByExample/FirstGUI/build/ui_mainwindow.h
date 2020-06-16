@@ -54,7 +54,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 800, 17));
+        menubar->setGeometry(QRect(0, 0, 800, 21));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -68,8 +68,8 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        label->setText(QString());
-        pushButton->setText(QCoreApplication::translate("MainWindow", "Click Me", nullptr));
+        label->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
+        pushButton->setText(QCoreApplication::translate("MainWindow", "Click me", nullptr));
     } // retranslateUi
 
 };
