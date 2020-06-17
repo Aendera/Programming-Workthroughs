@@ -1,0 +1,5 @@
+-DWIN32
+--compiler-flavor=msvc
+-o
+C:/Users/user/Downloads/IT/C++/WorkthroughC++ByExample/PaintingApplication/build/include/moc_mainwindow.cpp
+C:/Users/user/Downloads/IT/C++/WorkthroughC++ByExample/PaintingApplication/include/mainwindow.h
