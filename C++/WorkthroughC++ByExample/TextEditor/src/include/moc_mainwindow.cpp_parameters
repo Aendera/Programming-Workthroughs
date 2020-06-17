@@ -1,5 +1,0 @@
--DWIN32
---compiler-flavor=msvc
--o
-C:/Users/user/Downloads/IT/C++/WorkthroughC++ByExample/TextEditor/src/include/moc_mainwindow.cpp
-C:/Users/user/Downloads/IT/C++/WorkthroughC++ByExample/TextEditor/include/mainwindow.h
