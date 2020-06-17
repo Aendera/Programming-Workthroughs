@@ -1,18 +1,19 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <iostream>
+#include <QFile>
+#include <QTextStream>
+#include <QFileDialog>
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    QObject::connect(ui->plainTextEdit, &QPlainTextEdit::textChanged,
-        [&]() {std::cout << "Text has changed." << std::endl; });
+    /*QObject::connect(ui->plainTextEdit, &QPlainTextEdit::textChanged,
+    //    [&]() {std::cout << "Text has changed." << std::endl; });*/
 
-    QObject::connect(ui->actionSave, &QAction::triggered,
-        [&]() {ui->plainTextEdit->appendPlainText("Save triggered"); });
-    QObject::connect(ui->actionOpen, &QAction::triggered,
-        [&]() {ui->plainTextEdit->appendPlainText("Open triggered"); });
+    QObject::connect(ui->actionSave,SIGNAL(triggered()),this,SLOT(onSaveActionTriggered()));
+    QObject::connect(ui->actionOpen, SIGNAL(triggered()), this, SLOT(onOpenActionTriggered()));
 
 }
 
@@ -20,3 +21,27 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+void MainWindow::onSaveActionTriggered() {
+    auto file_path = QFileDialog::getSaveFileName(this, tr("Save Text File"), QApplication::applicationDirPath(), "Text files (*.txt)");
+
+    QFile file(file_path);
+    if(file.open(QIODevice::WriteOnly))
+    {
+        QTextStream text_stream(&file);
+        const auto current_text = ui->plainTextEdit->toPlainText();
+        text_stream << current_text;
+    }
+}
+void MainWindow::onOpenActionTriggered() {
+    const auto file_path = QFileDialog::getOpenFileName(this, tr("Open Text File"), QApplication::applicationDirPath(), "Text files (*.txt)");
+
+    QFile file(file_path);
+    if (file.open(QIODevice::ReadWrite)) {
+
+
+        QTextStream text_stream(&file);
+        auto text = text_stream.readAll();
+        ui->plainTextEdit->setPlainText(text);
+    }
+    }
