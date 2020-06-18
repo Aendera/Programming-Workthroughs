@@ -18,6 +18,7 @@
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
+#include "paint_widget.h"
 
 QT_BEGIN_NAMESPACE
 
@@ -29,7 +30,7 @@ public:
     QAction *actionSquares;
     QWidget *centralwidget;
     QVBoxLayout *verticalLayout;
-    QWidget *widget;
+    PaintWidget *paint_widget;
     QMenuBar *menubar;
     QMenu *menuPaint;
     QStatusBar *statusbar;
@@ -53,10 +54,10 @@ public:
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         verticalLayout = new QVBoxLayout(centralwidget);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
-        widget = new QWidget(centralwidget);
-        widget->setObjectName(QString::fromUtf8("widget"));
+        paint_widget = new PaintWidget(centralwidget);
+        paint_widget->setObjectName(QString::fromUtf8("paint_widget"));
 
-        verticalLayout->addWidget(widget);
+        verticalLayout->addWidget(paint_widget);
 
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
