@@ -1,6 +1,6 @@
 #pragma once
 #include <QWidget>
-
+#include <QPainterPath>
 class PaintWidget : public QWidget
 {
 	Q_OBJECT
@@ -17,4 +17,6 @@ protected:
 
 private:
 	bool is_drawing_{ false };
+	std::vector<QPainterPath> painter_paths_;
+	QPainterPath current_path_;
 };
