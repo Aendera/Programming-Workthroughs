@@ -85,6 +85,7 @@ void PaintWidget::mouseReleaseEvent(QMouseEvent* event)
 			current_path_.addEllipse(event->pos(), 20.0, 20.0);
 			break;
 		case Squares:
+			current_path_.addRect(event->x(), event->y(), 40.0, 40.0);
 			break;
 		}
 		painter_paths_.emplace_back(current_path_);
