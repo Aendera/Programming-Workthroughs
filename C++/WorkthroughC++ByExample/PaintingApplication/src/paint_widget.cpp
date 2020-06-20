@@ -5,8 +5,16 @@
 PaintWidget::PaintWidget(QWidget* parent)
 	: QWidget(parent)
 {
-	
+	current_style_ = Freehand;
 }
+void PaintWidget::setPaintStyle(const PaintStyle& style) {
+	current_style_ = style;
+}
+
+PaintStyle PaintWidget::paintStyle() const
+	{
+		return current_style_;
+	}
 
 void PaintWidget::paintEvent(QPaintEvent* event)
 {
@@ -31,29 +39,54 @@ void PaintWidget::paintEvent(QPaintEvent* event)
 void PaintWidget::mousePressEvent(QMouseEvent* event)
 {
 	if (event->button() == Qt::LeftButton) {
+		switch (current_style_)
+		{
+		case Freehand:
 
-		is_drawing_ = true;
-		std::cout << "Mouse pressed" << std::endl;
-		current_path_.moveTo(event->pos());
+			is_drawing_ = true;
+			current_path_.moveTo(event->pos());
+			break;
+		case Circles:
+			break;
+		case Squares:
+			break;
+		}
 	}
 }
 void PaintWidget::mouseMoveEvent(QMouseEvent* event)
 {
 	if (is_drawing_) {
-		std::cout << "Mouse moving at " << event->pos().x()
+		switch (current_style_)
+		{
+		case Freehand:
 
-			<< ", " << event->pos().y() << std::endl;
-		current_path_.lineTo(event->pos());
-		update();
+			current_path_.lineTo(event->pos());
+			update();
+			break;
+		case Circles:
+			break;
+		case Squares:
+			break;
+		}
 	}
 }
 
 void PaintWidget::mouseReleaseEvent(QMouseEvent* event)
 {
 	is_drawing_ = false;
-	std::cout << "Mouse released" << std::endl;
 	if (event->button() == Qt::LeftButton) {
-		current_path_.lineTo(event->pos());
+		switch (current_style_)
+		{
+		case Freehand:
+
+			current_path_.lineTo(event->pos());
+			break;
+		case Circles:
+			current_path_.addEllipse(event->pos(), 20.0, 20.0);
+			break;
+		case Squares:
+			break;
+		}
 		painter_paths_.emplace_back(current_path_);
 		current_path_ = QPainterPath();
 	}

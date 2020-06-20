@@ -14,7 +14,10 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-
+public slots:
+    void onDrawFreehandSelected();
+    void onDrawCirclesSelected();
+    void onDrawSquaresSelected();
 private:
     Ui::MainWindow *ui;
 };
