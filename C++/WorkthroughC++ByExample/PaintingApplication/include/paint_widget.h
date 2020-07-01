@@ -23,6 +23,8 @@ protected:
 
 private:
 	bool is_drawing_{ false };
+	int start_x, start_y;
+	int width, height;
 	std::vector<QPainterPath> painter_paths_;
 	QPainterPath current_path_;
 	PaintStyle current_style_;

@@ -39,16 +39,17 @@ void PaintWidget::paintEvent(QPaintEvent* event)
 void PaintWidget::mousePressEvent(QMouseEvent* event)
 {
 	if (event->button() == Qt::LeftButton) {
+		is_drawing_ = true;
 		switch (current_style_)
 		{
 		case Freehand:
 
-			is_drawing_ = true;
 			current_path_.moveTo(event->pos());
 			break;
 		case Circles:
-			break;
 		case Squares:
+			start_x = event->x();
+			start_y = event->y();
 			break;
 		}
 	}
@@ -59,15 +60,22 @@ void PaintWidget::mouseMoveEvent(QMouseEvent* event)
 		switch (current_style_)
 		{
 		case Freehand:
-
 			current_path_.lineTo(event->pos());
-			update();
 			break;
 		case Circles:
+			width = event->x() - start_x;
+			height = event->y() - start_y;
+			current_path_ = QPainterPath();
+			current_path_.addEllipse(start_x, start_y, width, height);
 			break;
 		case Squares:
+			width = event->x() - start_x;
+			height = event->y() - start_y;
+			current_path_ = QPainterPath();
+			current_path_.addRect(start_x, start_y, width, height);
 			break;
 		}
+		update();
 	}
 }
 
@@ -82,10 +90,7 @@ void PaintWidget::mouseReleaseEvent(QMouseEvent* event)
 			current_path_.lineTo(event->pos());
 			break;
 		case Circles:
-			current_path_.addEllipse(event->pos(), 20.0, 20.0);
-			break;
 		case Squares:
-			current_path_.addRect(event->x(), event->y(), 40.0, 40.0);
 			break;
 		}
 		painter_paths_.emplace_back(current_path_);
