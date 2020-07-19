@@ -1,2 +1,2 @@
-@py.exe C:\Python34\pw.py %*
+@python3.exe pw.py %*
 @pause
