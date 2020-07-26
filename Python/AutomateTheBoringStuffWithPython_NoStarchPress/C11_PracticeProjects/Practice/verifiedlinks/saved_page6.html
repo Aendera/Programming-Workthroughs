@@ -1,0 +1,180 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Making Games with Python &amp; Pygame</title>
+
+<!-- Google Analytics -->
+  <script type="text/javascript">
+//<![CDATA[
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-5459430-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  //]]>
+  </script>
+
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/css/inventwithpython.css">
+  <!--<link rel="stylesheet" href="/css/tether.min.css">-->
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <script src="/js/jquery-3.2.1.min.js"></script>
+  <!--<script src="/js/tether.min.js"></script>-->
+  <script src="/js/bootstrap.min.js"></script>
+  <style>
+  .testimonial-attribution { text-align: right; }
+  .cover-thumb { height: 250px; margin-left: auto; margin-right: auto; }
+  .testimonial { margin-top: 40px; margin-left: 20px; margin-right: 20px; }
+  .card { border: 0px; }
+  .row { margin-bottom: 20px; }
+  .btn { margin-top: 10px; }
+
+  </style>
+</head>
+<body style="background-color: #caeab7;">
+
+<nav class="navbar navbar-toggleable-md">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon text-white">☰</span>
+  </button>
+  <a class="navbar-brand" href="/">Invent with Python</a>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownReadMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Read for Free
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownReadMenuLink">
+          <a class="dropdown-item" href="https://automatetheboringstuff.com">Automate the Boring Stuff with Python</a>
+          <a class="dropdown-item" href="https://turtleappstore.com/book/">Coding with Minecraft</a>
+          <a class="dropdown-item" href="/cracking">Cracking Codes with Python</a>
+          <a class="dropdown-item" href="/invent4thed">Invent Your Own Computer Games with Python</a>
+          <a class="dropdown-item" href="/pygame">Making Games with Python &amp; Pygame</a>
+          <a class="dropdown-item" href="https://inventwithscratch.com">Scratch Programming Playground</a>
+        </div>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownBuyMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Buy Books
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownBuyMenuLink">
+          <a class="dropdown-item" href="https://www.amazon.com/gp/product/1593275994/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1593275994&linkCode=as2&tag=playwithpyth-20&linkId=HDM7V3T6RHC5VVN4">Automate the Boring Stuff with Python</a>
+          <a class="dropdown-item" href="https://www.amazon.com/gp/product/1593278535/ref=as_li_tl?ie=UTF8&tag=playwithpyth-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=1593278535&linkId=41a454fd9d3d5eded556e0de6f1f5ae1">Coding with Minecraft</a>
+          <a class="dropdown-item" href="https://www.amazon.com/gp/product/1593278225/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1593278225&linkCode=as2&tag=playwithpyth-20&linkId=bf3b22819f0886d277e88b8a653b81ad">Cracking Codes with Python</a>
+          <a class="dropdown-item" href="https://www.amazon.com/gp/product/1593277954/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1593277954&linkCode=as2&tag=playwithpyth-20&linkId=18a80d666d24cc13bf52ff57fb72a632">Invent Your Own Computer Games with Python</a>
+          <a class="dropdown-item" href="https://www.amazon.com/Making-Games-Python-Pygame-Sweigart/dp/1469901730?ie=UTF8&tag=playwithpyth-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0982106017">Making Games with Python &amp; Pygame</a>
+          <a class="dropdown-item" href="https://www.amazon.com/gp/product/1593277628/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1593277628&linkCode=as2&tag=playwithpyth-20&linkId=29a56275e4a22ffedc2b92282fe0a809">Scratch Programming Playground</a>
+        </div>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownUdemyMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Udemy Courses
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownUdemyMenuLink">
+          <a class="dropdown-item" href="https://inventwithpython.com/automateudemy">Automate the Boring Stuff with Python</a>
+          <a class="dropdown-item" href="https://www.udemy.com/scratch-game-programming/">Scratch Programming Playground</a>
+        </div>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="https://www.youtube.com/user/Albert10110">YouTube</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="https://www.reddit.com/r/inventwithpython">Forum</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="/blog">Blog</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="/#donate">Donate</a>
+      </li>
+
+    </ul>
+
+    <!--
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+    -->
+
+  </div>
+</nav>
+
+
+<div class="jumbotron" style='margin-bottom: 0px; background-color: #fffad0; background-image: url("../images/jumbotron_pygame.png");'>
+  <h1 class="display-3">Making Games with Python &amp; Pygame</h1>
+  <p><em>Making Games with Python &amp; Pygame</em> covers the Pygame library with the source code for 11 games. Making Games was written as a sequel for the same age range as Invent with Python. Once you have an understanding of the basics of Python programming, you can now expand your abilities using the Pygame library to make games with graphics, animation, and sound.</p>
+
+  <p>The book features the source code to 11 games. The games are clones of classics such as Nibbles, Tetris, Simon, Bejeweled, Othello, Connect Four, Flood It, and others.</p>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <p style="text-align: center;">
+        <a href="https://www.amazon.com/Making-Games-Python-Pygame-Sweigart/dp/1469901730?ie=UTF8&tag=playwithpyth-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0982106017" class="btn btn-primary">Buy on Amazon</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <h2>Downloads &amp; Online Tools</h2>
+      <ul>
+        <li><a href="/makinggames.pdf">PDF copy of the book.</a></li>
+        <li><a href="/makinggames.zip">Download source and other files for this book.</a></li>
+        <li><a href="diff">Online diff tool to compare your code to the code in this book.</a></li>
+        <li><a href="errata">Errata for this book.</a></li>
+        <li><a href="buggy">Buggy programs from this book to practice debugging on.</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <h2>Read the Book Online</h2>
+      <ul>
+        <li><a href="chapter1.html">Chapter 1 - Installing Python and Pygame</a></li>
+        <li><a href="chapter2.html">Chapter 2 - Pygame Basics</a></li>
+        <li><a href="chapter3.html">Chapter 3 - Memory Puzzle</a></li>
+        <li><a href="chapter4.html">Chapter 4 - Slide Puzzle</a></li>
+        <li><a href="chapter5.html">Chapter 5 - Simulate</a></li>
+        <li><a href="chapter6.html">Chapter 6 - Wormy</a></li>
+        <li><a href="chapter7.html">Chapter 7 - Tetromino</a></li>
+        <li><a href="chapter8.html">Chapter 8 - Squirrel Eat Squirrel</a></li>
+        <li><a href="chapter9.html">Chapter 9 - Star Pusher</a></li>
+        <li><a href="chapter10.html">Chapter 10 - Four Extra Games</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+<footer class="container-fluid text-center">
+  <p>Copyright 2009-<script type="text/javascript">document.write(new Date().getFullYear());</script>  | <a href="/cdn-cgi/l/email-protection#1b7a775b72756d7e756f6c726f736b626f73747535787476"><span class="__cf_email__" data-cfemail="0f6e634f6661796a617b78667b677f767b676061216c6062">[email&#160;protected]</span></a> | <a href="https://twitter.com/AlSweigart">@AlSweigart</a></p>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+</html>
+
+</body>
+</html>

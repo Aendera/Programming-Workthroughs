@@ -4,7 +4,7 @@
 const SPENDING_THRESHOLD=200;
 const ACCESSORY_PRICE=9.99;
  
- var balance=Number(prompt("Enter your balance"));
+ var balance=301;//Number(prompt("Enter your balance"));
 amount=0;
 function calculateTax(price){
     return price*TAX_RATE;
