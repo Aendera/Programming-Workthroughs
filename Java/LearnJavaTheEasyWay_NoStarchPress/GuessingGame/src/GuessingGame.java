@@ -12,20 +12,24 @@ import java.awt.event.ActionEvent;
 public class GuessingGame extends JFrame {
 	private JTextField txtGuess;
 	private JLabel lblOutput;
+	private JButton btnPlayAgain;
+	private JButton btnGuess;
 	private int theNumber;
-
+	private int numberOfTries;
 	public void checkGuess() {
 		String guessText=txtGuess.getText();
 		String message="";
 		try {
 			int guess=Integer.parseInt(guessText);
+			numberOfTries += 1;
 			if (guess < theNumber)
 				message=guess+" is too low. Try again.";
 			else if (guess > theNumber)
 				message=guess+" is too high. Try again.";
 			else {
-				message=guess+" is correct. You win! Let's play again!";
-				newGame();
+				message=guess+" is correct. You won in "+ numberOfTries + " tries! Let's play again!";
+				btnPlayAgain.setVisible(true);
+				btnGuess.setVisible(false);
 			}
 
 		} catch (Exception e) {
@@ -39,7 +43,10 @@ public class GuessingGame extends JFrame {
 	}
 
 	public void newGame() {
+		numberOfTries=0;
 		theNumber=(int)(Math.random()*100+1);
+		btnPlayAgain.setVisible(false);
+		btnGuess.setVisible(true);
 	}
 
 	public GuessingGame() {
@@ -68,7 +75,7 @@ public class GuessingGame extends JFrame {
 		getContentPane().add(txtGuess);
 		txtGuess.setColumns(3);
 
-		JButton btnGuess = new JButton("Guess!");
+		btnGuess = new JButton("Guess!");
 		btnGuess.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				checkGuess();
@@ -81,6 +88,15 @@ public class GuessingGame extends JFrame {
 		lblOutput.setHorizontalAlignment(SwingConstants.CENTER);
 		lblOutput.setBounds(10, 208, 414, 14);
 		getContentPane().add(lblOutput);
+		
+		btnPlayAgain = new JButton("Play Again");
+		btnPlayAgain.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				newGame();
+			}
+		});
+		btnPlayAgain.setBounds(172, 147, 89, 23);
+		getContentPane().add(btnPlayAgain);
 	}
 
 	public static void main(String[] args) {
