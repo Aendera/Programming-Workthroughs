@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     private int numberOfTries;
     private int range = 100;
     private TextView lblRange;
-
+    private int maxTries;
     public void checkGuess(){
         String guessText = txtGuess.getText().toString();
         String message="";
@@ -55,6 +55,18 @@ public class MainActivity extends AppCompatActivity {
                 editor.putInt("gamesWon", gamesWon);
                 editor.apply();
             }
+            if (numberOfTries > maxTries){
+                Toast.makeText(MainActivity.this,
+                        "You lost by using more than " + numberOfTries + "tries! Starting new game...",
+                        Toast.LENGTH_LONG).show();
+                SharedPreferences preferences = getDefaultSharedPreferences(this);
+                int gamesLost = preferences.getInt("gamesLost", 0) + 1;
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.putInt("gamesLost", gamesLost);
+                editor.apply();
+                newGame();
+            }
+
 
         } catch (Exception e) {
             message = "Enter a whole number between  1 and " + range + ".";
@@ -66,6 +78,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void newGame(){
+        numberOfTries = 0;
+        maxTries = (int) (Math.log(range)/Math.log(2) + 1);
         theNumber = (int)(Math.random() * range + 1);
         String lbl = "Enter a number between 1 and " + range + ".";
         lblRange.setText(lbl);
@@ -162,9 +176,13 @@ public class MainActivity extends AppCompatActivity {
             case R.id.action_gamestats:
                 SharedPreferences preferences = getDefaultSharedPreferences(this);
                 int gamesWon = preferences.getInt("gamesWon", 0);
+                int gamesLost = preferences.getInt("gamesLost", 0);
                 AlertDialog statDialog = new AlertDialog.Builder(MainActivity.this).create();
                 statDialog.setTitle("Guessing Game Stats");
-                statDialog.setMessage(("You have won " + gamesWon + " games. Way to go!"));
+                statDialog.setMessage(("You have won " + gamesWon + " out of "
+                        + (gamesWon+gamesLost) + " games, so " +
+                        (float) (100 * gamesWon/(gamesWon+gamesLost))
+                        + "% of games. Way to go!"));
                 statDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
