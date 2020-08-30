@@ -17,6 +17,7 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private EditText txtGuess;
@@ -37,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
                 message=guess+" is too high. Try again.";
             else {
                 message=guess+" is correct. You won in "+ numberOfTries + " tries! Let's play again!";
+                Toast.makeText(MainActivity.this,message, Toast.LENGTH_LONG).show();
+                newGame();
                 //btnPlayAgain.setVisible(true);
                 //btnGuess.setVisible(false);
             }
