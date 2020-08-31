@@ -7,6 +7,9 @@ public class SecretMessages {
 
 		String message;
 		Scanner scan = new Scanner(System.in);
+		int keyVal=13;
+		char key = (char) keyVal;
+		
 		do {
 		System.out.println("Enter a message to encode or decode:");
 		message = scan.nextLine();
@@ -19,11 +22,17 @@ public class SecretMessages {
 		//while (True) if (condition) break;
 		
 		String output = "";
-		System.out.println("Enter a secret key (-25 to 25):");
-		int keyVal = Integer.parseInt(scan.nextLine());
-		char key = (char) keyVal;
+		do {
+			try {
+				System.out.println("Enter a secret key (-25 to 25):");
+				keyVal = Integer.parseInt(scan.nextLine());
+				key = (char) keyVal;
+				if (keyVal < -25 || keyVal > 25)
+					System.out.println("Enter a number between -25 and 25!");
+			} catch(Exception e) {System.out.println("Enter a number!");}
+		}while (keyVal < -25 || keyVal > 25);
 		
-		for (int x = 0; x < message.length(); x++) {
+		for (int x = message.length() - 1; x >= 0; x--) {
 			char input = message.charAt(x);
 			if (input >= 'A' && input <= 'Z') {
 				input += key;
