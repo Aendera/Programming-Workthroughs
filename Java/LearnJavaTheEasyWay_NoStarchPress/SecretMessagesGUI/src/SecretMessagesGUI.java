@@ -12,12 +12,17 @@ import java.awt.Color;
 import javax.swing.JSlider;
 import javax.swing.event.ChangeListener;
 import javax.swing.event.ChangeEvent;
+import javax.swing.JScrollPane;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 public class SecretMessagesGUI extends JFrame {
 	private JTextField textKey;
 	private JTextArea textIn;
 	private JTextArea textOut;
 	private JSlider slider;
+	private JScrollPane scrollPane;
+	private JScrollPane scrollPane_1;
 	public String encode(String message, int keyVal) {
 		String output = "";
 		char key = (char) keyVal;
@@ -58,21 +63,34 @@ public class SecretMessagesGUI extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		getContentPane().setLayout(null);
 		
+		scrollPane = new JScrollPane();
+		scrollPane.setBounds(42, 26, 418, 99);
+		getContentPane().add(scrollPane);
+		
 		textIn = new JTextArea();
+		scrollPane.setViewportView(textIn);
 		textIn.setWrapStyleWord(true);
 		textIn.setLineWrap(true);
 		textIn.setFont(new Font("Parchment", Font.BOLD | Font.ITALIC, 36));
-		textIn.setBounds(42, 26, 418, 99);
-		getContentPane().add(textIn);
+		
+		scrollPane_1 = new JScrollPane();
+		scrollPane_1.setBounds(42, 197, 432, 153);
+		getContentPane().add(scrollPane_1);
 		
 		textOut = new JTextArea();
+		scrollPane_1.setViewportView(textOut);
 		textOut.setWrapStyleWord(true);
 		textOut.setLineWrap(true);
 		textOut.setFont(new Font("Parchment", Font.BOLD | Font.ITALIC, 36));
-		textOut.setBounds(42, 197, 432, 153);
-		getContentPane().add(textOut);
 		
 		textKey = new JTextField();
+		textKey.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyReleased(KeyEvent e) {
+				try {slider.setValue(Integer.parseInt(textKey.getText()));}
+				catch (Exception ex) {}
+			}
+		});
 		textKey.setHorizontalAlignment(SwingConstants.CENTER);
 		textKey.setText("3");
 		textKey.setBounds(233, 136, 86, 20);
@@ -84,8 +102,8 @@ public class SecretMessagesGUI extends JFrame {
 		lblNewLabel.setBounds(177, 139, 46, 14);
 		getContentPane().add(lblNewLabel);
 		
-		JButton btnNewButton = new JButton("Encode/Decode");
-		btnNewButton.addActionListener(new ActionListener() {
+		JButton EncodeButton = new JButton("Encode/Decode");
+		EncodeButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
 				String message = textIn.getText();
@@ -99,8 +117,8 @@ public class SecretMessagesGUI extends JFrame {
 			}
 			}
 		});
-		btnNewButton.setBounds(329, 136, 131, 23);
-		getContentPane().add(btnNewButton);
+		EncodeButton.setBounds(329, 136, 131, 23);
+		getContentPane().add(EncodeButton);
 		
 		slider = new JSlider();
 		slider.addChangeListener(new ChangeListener() {
@@ -122,6 +140,19 @@ public class SecretMessagesGUI extends JFrame {
 		slider.setBackground(new Color(0, 0, 128));
 		slider.setBounds(52, 125, 136, 59);
 		getContentPane().add(slider);
+		
+		JButton MoveUpButton = new JButton("^ Move Up ^");
+		MoveUpButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				textIn.setText(textOut.getText());
+			int key=slider.getValue();
+			key = -key;
+			slider.setValue(key);
+			
+			}
+		});
+		MoveUpButton.setBounds(243, 167, 97, 23);
+		getContentPane().add(MoveUpButton);
 	}
 
 	public static void main(String[] args) {
