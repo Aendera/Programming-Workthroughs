@@ -126,22 +126,19 @@ public class BubblePanel extends JPanel {
 		private final int MAX_SPEED = 5;
 		
 		public Bubble(int newX, int newY, int newSize) {
-			x=newX;
-			y=newY;
+			x=(newX / newSize) * newSize + newSize/2;
+			y=(newY / newSize) * newSize + newSize/2;
 			size=newSize;
 			color = new Color( rand.nextInt(256),//r
 								rand.nextInt(256),//g
 								rand.nextInt(256),//b
 								rand.nextInt(256));//alpha
-			xspeed = rand.nextInt(MAX_SPEED * 2 + 1) - MAX_SPEED;
-			yspeed = rand.nextInt(MAX_SPEED * 2 + 1) - MAX_SPEED;
-			if (xspeed == 0 && yspeed == 0)
-				xspeed=yspeed=1;//does multiple assignment work this way?
+			xspeed = yspeed = MAX_SPEED;
 		}
 		
 		public void draw(Graphics canvas) {
 			canvas.setColor(color);
-			canvas.fillOval(x-size/2, y - size/2, size,size);
+			canvas.fillRect(x-size/2, y - size/2, size,size);
 		}
 		
 		public void update() {
