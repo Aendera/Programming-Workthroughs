@@ -54,12 +54,21 @@ public class BubbleView extends androidx.appcompat.widget.AppCompatImageView imp
 
     @Override
     public boolean onTouch(View view, MotionEvent motionEvent) {
-        for (int n = 0; n<motionEvent.getPointerCount(); n++){
+        int fingercount = motionEvent.getPointerCount();
+        if (fingercount == 1){
+            int x = (int) motionEvent.getX();
+            int y = (int) motionEvent.getY();
+            int s = rand.nextInt(size) + size*2;
+            int MAX_SPEED = 25;
+            bubbleList.add(new Bubble(x,y,s,25,25));
+
+        }else{
+        for (int n = 0; n<fingercount; n++){
             int x = (int) motionEvent.getX(n);
             int y = (int) motionEvent.getY(n);
             int s = rand.nextInt(size) + size;
             bubbleList.add(new Bubble(x,y,s));
-        }
+        }}
         return true;
     }
 
@@ -85,6 +94,19 @@ public class BubbleView extends androidx.appcompat.widget.AppCompatImageView imp
         if (xspeed == 0 && yspeed == 0)
             xspeed=yspeed=1;//does multiple assignment work this way?
     }
+        public Bubble(int newX, int newY, int newSize, int newXspeed, int newYspeed) {
+            x=(newX / newSize) * newSize + newSize/2;
+            y=(newY / newSize) * newSize + newSize/2;
+            size=newSize;
+            color = Color.argb( rand.nextInt(256),//r
+                    rand.nextInt(256),//g
+                    rand.nextInt(256),//b
+                    rand.nextInt(256));//alpha
+            xspeed = newXspeed;
+            yspeed = newYspeed;
+            if (xspeed == 0 && yspeed == 0)
+                xspeed=yspeed=1;//does multiple assignment work this way?
+        }
 
     public void draw(Canvas canvas) {
         myPaint.setColor(color);
