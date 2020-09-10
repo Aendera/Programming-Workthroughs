@@ -55,8 +55,8 @@ public class BubblePanel extends JPanel {
 		private Color color;
 		
 		public Bubble(int newX, int newY, int newSize) {
-			x=(newX / newSize) * newSize + newSize/2;
-			y=(newY / newSize) * newSize + newSize/2;
+			x=newX;
+			y=newY;
 			size=newSize;
 			color = new Color( rand.nextInt(256),
 								rand.nextInt(256),
@@ -65,7 +65,6 @@ public class BubblePanel extends JPanel {
 		
 		public void draw(Graphics canvas) {
 			canvas.setColor(color);
-			//canvas.fillRect(x-size/2, y - size/2, size,size);
 			canvas.fillOval(x-size/2, y - size/2, size,size);
 		}
 	}
