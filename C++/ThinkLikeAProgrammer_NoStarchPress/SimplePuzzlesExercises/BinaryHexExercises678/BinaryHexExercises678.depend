@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1599903834 source:c:\users\user\downloads\it\c++\thinklikeaprogrammer_nostarchpress\simplepuzzlesexercises\binaryhexexercises678\main.cpp
+	<iostream>
+	<cmath>
+
