@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class Day4_Q1 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
 		double [] salaries;
 		salaries = new double[200];
 		for (int pos=0;pos<salaries.length;pos++)
