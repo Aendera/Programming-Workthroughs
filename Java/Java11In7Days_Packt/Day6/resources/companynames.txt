@@ -1,0 +1,7 @@
+UBS
+HP
+Microsoft
+Apple
+Oracle
+Sun Microsystems
+Google
