@@ -1,12 +1,12 @@
-package day6;
-
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 
-public class HomeWork_Q1 {
-
+public class TestingExceptions {
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		ArrayList<String> names = new ArrayList<String>();
 		File file = new File("resources/companynames.txt");
 		FileReader fileReader;
@@ -19,19 +19,18 @@ public class HomeWork_Q1 {
 			System.out.println("Reached here");
 			while((text=bf.readLine()) != null){
 				//System.out.println(text);
-				names.add(text);
-			}
-		}catch(FileNotFoundException e) {
-			e.printStackTrace();
+				names.add(text);}
 		}catch(IOException e) {
-			e.printStackTrace();
+			e.printStackTrace();}
+		System.out.println("Reaced circles");
+		try {
+		Circle c2=new Circle(-2);
+
+		System.out.println(c2.toString());
+		}catch(CircleException c) {
+			c.printStackTrace();
+			System.out.println("Circle Exception caught");
 		}
-		names.forEach(item-> System.out.println(item));
-		System.out.println("Filtered names");
-		names.stream()
-		.filter(item -> item.startsWith("A"))
-		.forEach(item -> System.out.println(item));
 	}
 	
-
 }
