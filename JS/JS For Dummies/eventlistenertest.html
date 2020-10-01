@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Counting app</title>
+	<script type="text/javascript">
+		window.addEventListener('load',registerEvents,false);
+		var theCount = 0;
+		function registerEvents(e){
+			document.getElementById("incrementButton").addEventListener('click',increaseCount,false);
+			document.getElementById("incrementButton").addEventListener('click',changeSize,false);
+				
+		}
+		function increaseCount(e){
+			theCount++;
+			document.getElementById("currentCount").innerHTML = theCount;
+		}
+		function changeSize(e){
+			document.getElementById("currentCount").style.fontSize = theCount;
+		}
+	</script>
+</head>
+<body>
+<h1>Click button to count</h1>
+<p> Current number: <span id="currentCount">0</span></p>
+<button id="incrementButton">Increase Count</button>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML Family</title>
+<script type="text/javascript">
+	function boldFirstAndLast(){
+		document.body.childNodes[1].firstChild.style.fontWeight="bold";
+		document.body.childNodes[1].lastChild.style.fontWeight="bold";//bolds comment, does nothing
+	}
+</script>
+</head>
+<body>
+<section><p>First</p><p>second</p>
+	<p>Third</p><!--This comment is also a child of section--></section>
+<h1>Nodes in section html</h1>
+<script type="text/javascript">
+	var myNodelist=document.body.childNodes[1].childNodes;
+	for (i=0;i<myNodelist.length;i++)
+		document.write(myNodelist[i]+"<br>");
+</script>
+<script type="text/javascript">
+	boldFirstAndLast();
+</script>
+</body>
+</html>

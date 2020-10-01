@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQuery CSS</title>
+
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#sizer').change(function(){
+				$('#theText').css('font-size',$('#sizer').val());
+			});
+		});
+	</script>
+</head>
+<body>
+<div id="theText">Hello!</div>
+<form id="controller"><input type="range" id="sizer" min="10" max="100"></form>
+</body>
+</html>

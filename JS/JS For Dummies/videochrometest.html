@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Get the Media</title>
+	<style type="text/css">
+		html, body, #map-canvas { height: 100%; margin: 0;padding: 0; }
+	</style>
+<script type="text/javascript">
+	window.addEventListener('DOMContentLoaded',function () {
+			var v=document.getElementById('v');
+			navigator.getUserMedia=(navigator.getUserMedia||navigator.webkitGetUserMedia||navigator.mozGetUserMedia || navigator.msGetUserMedia);
+			if (navigator.getUserMedia){
+				console.log(navigator);
+				navigator.getUserMedia(
+				{
+					video:true,
+					audio:false
+				},
+
+				function(stream){
+					var url = window.URL || window.webkitURL;
+					console.log(url);
+					v.srcObject = stream;
+					//v.src = url ? url.createObjectURL(stream) : stream; //deprecated
+					v.play();
+				},
+				function(error){
+					alert('Something went wrong. (error code ' + error.code +')');
+					return;
+				}
+				);
+			} else {
+				alert('Sorry, the browser you are using doesn\'t support getUserMedia');
+				return;
+			};
+	});
+</script>
+</head>
+<body>
+<video id="v" />
+</body>
+</html>

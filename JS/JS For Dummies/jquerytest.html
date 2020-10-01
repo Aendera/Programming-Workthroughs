@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello JQuery</title>
+	<style type="text/css">
+		#helloDiv{
+			background: #333;
+			color: #fff;
+			font-size: 24px;
+			text-align: center;
+			border-radius: 3px;
+			width: 200px;
+			height: 200px;
+			display: none;
+		}
+	</style>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+</head>
+<body>
+<button id="clickme">Click me!</button>
+<div id="helloDiv">Hello, JQuery!</div>
+<script type="text/javascript">
+	$("#clickme").click(function(){
+		if ($("#helloDiv").is(":hidden")){
+			$("#helloDiv").slideDown("slow");
+		}else{
+			$("div").hide();
+		}
+	})
+</script>
+</body>
+</html>
