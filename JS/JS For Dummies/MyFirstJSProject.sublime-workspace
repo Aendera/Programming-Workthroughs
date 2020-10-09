@@ -4,6 +4,90 @@
 		"selected_items":
 		[
 			[
+				"fun",
+				"function"
+			],
+			[
+				"border-r",
+				"border-radius\tproperty"
+			],
+			[
+				"text",
+				"text-align\tproperty"
+			],
+			[
+				"fon",
+				"font-size\tproperty"
+			],
+			[
+				"get",
+				"getUserMedia"
+			],
+			[
+				"map",
+				"map-canvas"
+			],
+			[
+				"st",
+				"style\tTag"
+			],
+			[
+				"r",
+				"reqListener"
+			],
+			[
+				"back",
+				"background-position\tproperty"
+			],
+			[
+				"the",
+				"theResult"
+			],
+			[
+				"oper",
+				"operate"
+			],
+			[
+				"op",
+				"option\tTag"
+			],
+			[
+				"Numbe",
+				"numberOne"
+			],
+			[
+				"in",
+				"input\tTag"
+			],
+			[
+				"Math",
+				"mathWiz"
+			],
+			[
+				"bo",
+				"boldFirstAndLast"
+			],
+			[
+				"chi",
+				"childNodes"
+			],
+			[
+				"seco",
+				"secondNumber"
+			],
+			[
+				"first",
+				"firstNumber"
+			],
+			[
+				"coun",
+				"countToTen"
+			],
+			[
+				"H",
+				"html"
+			],
+			[
 				"dumps",
 				"dumps(<obj>, ensure_ascii=<bool>)\tcall ⟠"
 			]
@@ -12,10 +96,73 @@
 	"buffers":
 	[
 		{
-			"file": "testfile.js",
+			"file": "jsanim.html",
 			"settings":
 			{
-				"buffer_size": 0,
+				"buffer_size": 855,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "ajaxtest.html",
+			"settings":
+			{
+				"buffer_size": 699,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "geoposition.html",
+			"settings":
+			{
+				"buffer_size": 335,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "googlemaps.html",
+			"settings":
+			{
+				"buffer_size": 790,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "videochrometest.html",
+			"settings":
+			{
+				"buffer_size": 1060,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "jquerytest.html",
+			"settings":
+			{
+				"buffer_size": 655,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "jquerystylechange.html",
+			"settings":
+			{
+				"buffer_size": 468,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "animatejquery.html",
+			"settings":
+			{
+				"buffer_size": 1084,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -53,6 +200,14 @@
 	},
 	"file_history":
 	[
+		"/C/Users/user/Downloads/IT/JS/JS For Dummies/onjquery.html",
+		"/C/Users/user/Downloads/IT/JS/JS For Dummies/testfile.html",
+		"/C/Users/user/Downloads/IT/JS/JS For Dummies/countToTen.js",
+		"/C/Users/user/Downloads/IT/JS/JS For Dummies/addtwo.html",
+		"/C/Users/user/Downloads/IT/JS/JS For Dummies/formtest.html",
+		"/C/Users/user/Downloads/IT/JS/JS For Dummies/eventlistenertest.html",
+		"/C/Users/user/Downloads/IT/JS/JS For Dummies/domdisplay.html",
+		"/C/Users/user/Downloads/IT/JS/JS For Dummies/navigatorproperties.html",
 		"/C/Users/user/Google Drive/Recettes mami Dedette/Entremets/IMG_20170827_180012.jpg",
 		"/C/Users/user/AppData/Local/Temp/kite_tutorial.py",
 		"/C/Tutorialtestfiles/Python/cleancode/README.rst"
@@ -90,35 +245,233 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "testfile.js",
+					"file": "jsanim.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 855,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								839,
+								839
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 91.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "ajaxtest.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 699,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								253,
+								253
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "geoposition.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 335,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								288,
+								288
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "googlemaps.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 790,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								615,
+								615
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "videochrometest.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1060,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								753,
+								753
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 216.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "jquerytest.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 655,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								358,
+								266
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "jquerystylechange.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 468,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								315,
+								315
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "animatejquery.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1084,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								582,
+								582
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -198,7 +551,7 @@
 	{
 	},
 	"show_minimap": true,
-	"show_open_files": false,
+	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
 	"side_bar_width": 150.0,
