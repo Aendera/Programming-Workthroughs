@@ -42,17 +42,17 @@ def get_Nobel_winners(table):
 
 def get_winner_nationality(w):
     """Scrape biographic data from winner's wikipedia page"""
-    data=get_url('http://en.wikipedia.org'+w['link'])
+    data=requests.get('http://en.wikipedia.org'+w['link']).text
     soup=BeautifulSoup(data)
     person_data={'name':w['name']}
     attr_rows=soup.select('table.infobox tr')
-    for tr in attr_rowsL
-    try:
-        attribute=tr.select_one('th').text
-        if attribute == "Nationality":
-            person_data[attribute]=tr.select_one('td').text
-    except AttributeError:
-            pass
+    for tr in attr_rows:
+        try:
+            attribute=tr.select_one('th').text
+            if attribute == "Nationality":
+                person_data[attribute]=tr.select_one('td').text
+        except AttributeError:
+                pass
 
-        
+
     return person_data

@@ -1,0 +1,20 @@
+Date: Mon, 26 Oct 2020 13:56:25 GMT
+Content-Type: image/jpeg
+X-Object-Meta-Sha1Base36: dhhptjl3dgmrpncur6l8xu5acpagyjs
+Content-Disposition: inline;filename*=UTF-8''Carlos_Saavedra_Lamas.jpg
+Last-Modified: Thu, 30 Mar 2017 23:13:26 GMT
+X-Timestamp: 1490915605.64059
+Etag: 588dfa657660a8b2e3680fc4166929e7
+Server: ATS/8.0.8
+Age: 2966
+X-Cache: cp3055 hit, cp3055 hit/1
+X-Cache-Status: hit-front
+Server-Timing: cache;desc="hit-front"
+Strict-Transport-Security: max-age=106384710; includeSubDomains; preload
+Report-To: { "group": "wm_nel", "max_age": 86400, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0" }] }
+Nel: { "report_to": "wm_nel", "max_age": 86400, "failure_fraction": 0.05, "success_fraction": 0.0}
+X-Client-Ip: 109.21.58.209
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: Age, Date, Content-Length, Content-Range, X-Content-Duration, X-Cache
+Timing-Allow-Origin: *
+Accept-Ranges: bytes

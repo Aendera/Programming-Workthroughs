@@ -1,0 +1,9 @@
+Date: Mon, 26 Oct 2020 14:30:35 GMT
+Server: Varnish
+X-Varnish: 641148079
+X-Cache: cp3063 int
+X-Cache-Status: int-front
+Server-Timing: cache;desc="int-front"
+Set-Cookie: WMF-Last-Access=26-Oct-2020;Path=/;HttpOnly;secure;Expires=Fri, 27 Nov 2020 12:00:00 GMT
+X-Client-Ip: 109.21.58.209
+Location: https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Eccles_lab.jpg/200px-Eccles_lab.jpg

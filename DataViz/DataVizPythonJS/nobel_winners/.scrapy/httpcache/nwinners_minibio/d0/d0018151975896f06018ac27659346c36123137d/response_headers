@@ -1,0 +1,19 @@
+Date: Mon, 26 Oct 2020 13:32:39 GMT
+Content-Type: image/jpeg
+X-Object-Meta-Sha1Base36: q98uk6pbti2864wil4j23ldvytcw11z
+Last-Modified: Thu, 31 Oct 2013 23:45:10 GMT
+X-Timestamp: 1383263109.33536
+Etag: a533a09cdde7643395bca9b059373d9c
+Server: ATS/8.0.8
+Age: 4390
+X-Cache: cp3055 hit, cp3055 hit/1
+X-Cache-Status: hit-front
+Server-Timing: cache;desc="hit-front"
+Strict-Transport-Security: max-age=106384710; includeSubDomains; preload
+Report-To: { "group": "wm_nel", "max_age": 86400, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0" }] }
+Nel: { "report_to": "wm_nel", "max_age": 86400, "failure_fraction": 0.05, "success_fraction": 0.0}
+X-Client-Ip: 109.21.58.209
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: Age, Date, Content-Length, Content-Range, X-Content-Duration, X-Cache
+Timing-Allow-Origin: *
+Accept-Ranges: bytes

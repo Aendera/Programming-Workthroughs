@@ -1,0 +1,24 @@
+Date: Mon, 26 Oct 2020 13:18:29 GMT
+Cache-Control: s-maxage=3600, must-revalidate, max-age=0
+Vary: X-Subdomain
+Server: ATS/8.0.8
+X-Content-Type-Options: nosniff
+X-Article-Id: 19292575
+X-Language: en
+X-Site: wikipedia
+X-Request-Id: fd5cacf8-ec27-4316-8e20-aa02239b4d58
+Last-Modified: Sat, 12 Sep 2020 11:16:08 GMT
+Content-Type: text/plain; charset=utf-8
+Content-Encoding: gzip
+Age: 2525
+X-Cache: cp3052 hit, cp3054 hit/500
+X-Cache-Status: hit-front
+Server-Timing: cache;desc="hit-front"
+Strict-Transport-Security: max-age=106384710; includeSubDomains; preload
+Report-To: { "group": "wm_nel", "max_age": 86400, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0" }] }
+Nel: { "report_to": "wm_nel", "max_age": 86400, "failure_fraction": 0.05, "success_fraction": 0.0}
+Set-Cookie: WMF-Last-Access=26-Oct-2020;Path=/;HttpOnly;secure;Expires=Fri, 27 Nov 2020 12:00:00 GMT
+Set-Cookie: WMF-Last-Access-Global=26-Oct-2020;Path=/;Domain=.wikipedia.org;HttpOnly;secure;Expires=Fri, 27 Nov 2020 12:00:00 GMT
+Set-Cookie: GeoIP=FR:ARA:Ferney-Voltaire:46.26:6.11:v4; Path=/; secure; Domain=.wikipedia.org
+X-Client-Ip: 109.21.58.209
+Accept-Ranges: bytes

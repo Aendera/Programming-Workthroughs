@@ -1,0 +1,22 @@
+Date: Mon, 26 Oct 2020 14:05:17 GMT
+Server: mw2361.codfw.wmnet
+X-Content-Type-Options: nosniff
+P3P: CP="See https://www.wikidata.org/wiki/Special:CentralAutoLogin/P3P for more info."
+Vary: Accept-Encoding,X-Forwarded-Proto,Cookie,Authorization
+Expires: Mon, 26 Oct 2020 14:05:17 GMT
+X-Request-Id: 4f069537-d0d3-4cf0-9525-a2ac12d69146
+Last-Modified: Mon, 26 Oct 2020 14:05:17 GMT
+Location: https://www.wikidata.org/wiki/Q193672
+Content-Type: text/html; charset=utf-8
+Age: 0
+X-Cache: cp3056 miss, cp3054 pass
+X-Cache-Status: pass
+Server-Timing: cache;desc="pass"
+Strict-Transport-Security: max-age=106384710; includeSubDomains; preload
+Report-To: { "group": "wm_nel", "max_age": 86400, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0" }] }
+Nel: { "report_to": "wm_nel", "max_age": 86400, "failure_fraction": 0.05, "success_fraction": 0.0}
+Set-Cookie: WMF-Last-Access=26-Oct-2020;Path=/;HttpOnly;secure;Expires=Fri, 27 Nov 2020 12:00:00 GMT
+Set-Cookie: WMF-Last-Access-Global=26-Oct-2020;Path=/;Domain=.wikidata.org;HttpOnly;secure;Expires=Fri, 27 Nov 2020 12:00:00 GMT
+Set-Cookie: GeoIP=FR:ARA:Ferney-Voltaire:46.26:6.11:v4; Path=/; secure; Domain=.wikidata.org
+X-Client-Ip: 109.21.58.209
+Cache-Control: private, s-maxage=0, max-age=0, must-revalidate

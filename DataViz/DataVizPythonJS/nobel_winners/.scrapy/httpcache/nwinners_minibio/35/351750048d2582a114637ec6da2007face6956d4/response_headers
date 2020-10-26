@@ -1,0 +1,20 @@
+Date: Mon, 26 Oct 2020 13:06:06 GMT
+Content-Type: image/jpeg
+X-Object-Meta-Sha1Base36: le5iip1eshhlifdqo7mpoml6mdjxvhi
+Content-Disposition: inline;filename*=UTF-8''Frank_Macfarlane_Burnet.jpg
+Last-Modified: Fri, 06 Jun 2014 06:05:25 GMT
+X-Timestamp: 1402034724.30115
+Etag: a8c2e76a30280818decab2c0b6cb573f
+Server: ATS/8.0.8
+Age: 5983
+X-Cache: cp3061 hit, cp3055 miss
+X-Cache-Status: hit-local
+Server-Timing: cache;desc="hit-local"
+Strict-Transport-Security: max-age=106384710; includeSubDomains; preload
+Report-To: { "group": "wm_nel", "max_age": 86400, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0" }] }
+Nel: { "report_to": "wm_nel", "max_age": 86400, "failure_fraction": 0.05, "success_fraction": 0.0}
+X-Client-Ip: 109.21.58.209
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: Age, Date, Content-Length, Content-Range, X-Content-Duration, X-Cache
+Timing-Allow-Origin: *
+Accept-Ranges: bytes
